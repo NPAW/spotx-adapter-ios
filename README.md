@@ -1,0 +1,2 @@
+# spotx-adapter-ios
+
