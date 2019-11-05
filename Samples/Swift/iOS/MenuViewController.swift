@@ -7,26 +7,37 @@
 //
 
 import UIKit
+import YouboraConfigUtils
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let navigationController = self.navigationController {
+            navigationController.delegate = self
+        }
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? PlayerViewController {
+            viewController.viewModel = PlayerViewModel(segueIdentifier: segue.identifier)
+            return
+        }
+       
     }
-    */
-    @IBAction func onSettingsPress(_ sender: Any) {
+
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+//        if let playerViewController = viewController as? PlayerViewController {
+//            playerViewController.loadAdPlayer()
+//            return
+//        }
     }
     
+    @IBAction func onSettingsPress(_ sender: Any) {
+        self.navigationController?.pushViewController(YouboraConfigViewController().initFromXIB(), animated: true)
+    }
 }

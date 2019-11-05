@@ -8,25 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		0612780F2369DF66009F0F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0612780E2369DF66009F0F0B /* AppDelegate.swift */; };
-		061278112369DF66009F0F0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061278102369DF66009F0F0B /* SceneDelegate.swift */; };
-		061278132369DF66009F0F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061278122369DF66009F0F0B /* ViewController.swift */; };
 		061278162369DF66009F0F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061278142369DF66009F0F0B /* Main.storyboard */; };
 		061278182369DF66009F0F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061278172369DF66009F0F0B /* Assets.xcassets */; };
 		0612781B2369DF66009F0F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061278192369DF66009F0F0B /* LaunchScreen.storyboard */; };
 		061278722369E7AD009F0F0B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061278712369E7AD009F0F0B /* MenuViewController.swift */; };
+		061278742369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061278732369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework */; };
+		061278752369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 061278732369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0612787A2369F28F009F0F0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061278792369F28F009F0F0B /* Constants.swift */; };
+		061278A523706C0F009F0F0B /* NavigationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061278A423706C0F009F0F0B /* NavigationUtils.swift */; };
+		06F0A7FA2370929D005D3AD0 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F0A7F92370929D005D3AD0 /* PlayerViewController.swift */; };
+		06F0A7FC237092FA005D3AD0 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F0A7FB237092FA005D3AD0 /* PlayerViewModel.swift */; };
 		76F3D992AE88F30D8F349E2A /* Pods_iOSSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8093064CBCE4C9CB3EAC59 /* Pods_iOSSwift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		061278762369E9AC009F0F0B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				061278752369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0612780C2369DF66009F0F0B /* iOSSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0612780E2369DF66009F0F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		061278102369DF66009F0F0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		061278122369DF66009F0F0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		061278152369DF66009F0F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		061278172369DF66009F0F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0612781A2369DF66009F0F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0612781C2369DF66009F0F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061278712369E7AD009F0F0B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		061278732369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		061278792369F28F009F0F0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		061278A423706C0F009F0F0B /* NavigationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtils.swift; sourceTree = "<group>"; };
+		06F0A7F92370929D005D3AD0 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		06F0A7FB237092FA005D3AD0 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		0D054980D77D7CB08AFDE94F /* Pods_tvOSSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOSSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31932158B825D0BAAD430C52 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3C8093064CBCE4C9CB3EAC59 /* Pods_iOSSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061278742369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework in Frameworks */,
 				76F3D992AE88F30D8F349E2A /* Pods_iOSSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,9 +94,10 @@
 		0612780D2369DF66009F0F0B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				061278A123706A10009F0F0B /* View Models */,
+				06F0A7F223707110005D3AD0 /* View Controllers */,
+				061278782369F270009F0F0B /* Utils  */,
 				0612780E2369DF66009F0F0B /* AppDelegate.swift */,
-				061278102369DF66009F0F0B /* SceneDelegate.swift */,
-				061278122369DF66009F0F0B /* ViewController.swift */,
 				061278142369DF66009F0F0B /* Main.storyboard */,
 				061278172369DF66009F0F0B /* Assets.xcassets */,
 				061278192369DF66009F0F0B /* LaunchScreen.storyboard */,
@@ -84,9 +107,35 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		061278782369F270009F0F0B /* Utils  */ = {
+			isa = PBXGroup;
+			children = (
+				061278792369F28F009F0F0B /* Constants.swift */,
+				061278A423706C0F009F0F0B /* NavigationUtils.swift */,
+			);
+			path = "Utils ";
+			sourceTree = "<group>";
+		};
+		061278A123706A10009F0F0B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				06F0A7FB237092FA005D3AD0 /* PlayerViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		06F0A7F223707110005D3AD0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06F0A7F92370929D005D3AD0 /* PlayerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		355807FC13C625DCFC79CCB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				061278732369E9AC009F0F0B /* YouboraSpotXPlayerAdapter.framework */,
 				3C8093064CBCE4C9CB3EAC59 /* Pods_iOSSwift.framework */,
 				0D054980D77D7CB08AFDE94F /* Pods_tvOSSwift.framework */,
 			);
@@ -121,6 +170,7 @@
 				061278092369DF66009F0F0B /* Frameworks */,
 				0612780A2369DF66009F0F0B /* Resources */,
 				7E5D4D33069EDBBFFD630396 /* [CP] Embed Pods Frameworks */,
+				061278762369E9AC009F0F0B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,10 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061278132369DF66009F0F0B /* ViewController.swift in Sources */,
 				0612780F2369DF66009F0F0B /* AppDelegate.swift in Sources */,
-				061278112369DF66009F0F0B /* SceneDelegate.swift in Sources */,
 				061278722369E7AD009F0F0B /* MenuViewController.swift in Sources */,
+				06F0A7FA2370929D005D3AD0 /* PlayerViewController.swift in Sources */,
+				06F0A7FC237092FA005D3AD0 /* PlayerViewModel.swift in Sources */,
+				0612787A2369F28F009F0F0B /* Constants.swift in Sources */,
+				061278A523706C0F009F0F0B /* NavigationUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -372,17 +424,22 @@
 			baseConfigurationReference = 8AB2E18545F94B306A4C7251 /* Pods-iOSSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = npaw.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -391,17 +448,22 @@
 			baseConfigurationReference = BD512F3B57553C8FEAE0EA38 /* Pods-iOSSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = npaw.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

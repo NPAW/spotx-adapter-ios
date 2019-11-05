@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lta-vX-rGd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lta-vX-rGd">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="113" y="171"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rj2-Pc-X9Z">
             <objects>
@@ -45,7 +33,32 @@
                     <view key="view" contentMode="scaleToFill" id="hcG-a3-d9N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mq9-Jb-aAo">
+                                <rect key="frame" x="83" y="423" width="248" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="528-WJ-qmr">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoj-gl-bVF">
+                                        <rect key="frame" x="0.0" y="20.5" width="248" height="30"/>
+                                        <state key="normal" title="Basic"/>
+                                        <connections>
+                                            <segue destination="qMe-ks-eWt" kind="show" id="dWM-U9-sEI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mq9-Jb-aAo" firstAttribute="width" secondItem="dQs-al-g1c" secondAttribute="width" multiplier="0.6" id="BuP-2n-yTl"/>
+                            <constraint firstItem="Mq9-Jb-aAo" firstAttribute="centerX" secondItem="hcG-a3-d9N" secondAttribute="centerX" id="Lgv-t3-Ltf"/>
+                            <constraint firstItem="Mq9-Jb-aAo" firstAttribute="centerY" secondItem="hcG-a3-d9N" secondAttribute="centerY" id="hYn-3S-CYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dQs-al-g1c"/>
                     </view>
                     <navigationItem key="navigationItem" id="7OB-bS-Mej">
@@ -58,7 +71,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sou-mh-K71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="-482"/>
+            <point key="canvasLocation" x="333" y="-788"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="RvV-o9-4qq">
+            <objects>
+                <viewController id="qMe-ks-eWt" customClass="PlayerViewController" customModule="iOSSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QLr-8g-AFW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ptb-Se-EOo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B5b-II-oxs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkS-G0-eQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317" y="-788"/>
         </scene>
     </scenes>
 </document>

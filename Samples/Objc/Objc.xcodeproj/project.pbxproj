@@ -8,28 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		061278402369E065009F0F0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0612783F2369E065009F0F0B /* AppDelegate.m */; };
-		061278432369E065009F0F0B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 061278422369E065009F0F0B /* SceneDelegate.m */; };
-		061278462369E065009F0F0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061278452369E065009F0F0B /* ViewController.m */; };
 		061278492369E065009F0F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061278472369E065009F0F0B /* Main.storyboard */; };
 		0612784B2369E066009F0F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0612784A2369E066009F0F0B /* Assets.xcassets */; };
 		0612784E2369E066009F0F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0612784C2369E066009F0F0B /* LaunchScreen.storyboard */; };
 		061278512369E066009F0F0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 061278502369E066009F0F0B /* main.m */; };
+		0612787D2369F50F009F0F0B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0612787C2369F50F009F0F0B /* MenuViewController.m */; };
+		061278802369F52B009F0F0B /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0612787F2369F52B009F0F0B /* PlayerViewController.m */; };
+		061278842369F840009F0F0B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 061278832369F840009F0F0B /* Constants.m */; };
+		06127889236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */; };
+		0612788A236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAFBEF49A17807E972F4FB58 /* Pods_iOSObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C078B74EB21CD94B761DEFC2 /* Pods_iOSObjc.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0612788B236AE570009F0F0B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0612788A236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0612783C2369E065009F0F0B /* iOSObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0612783E2369E065009F0F0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0612783F2369E065009F0F0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		061278412369E065009F0F0B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		061278422369E065009F0F0B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		061278442369E065009F0F0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		061278452369E065009F0F0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		061278482369E065009F0F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0612784A2369E066009F0F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0612784D2369E066009F0F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0612784F2369E066009F0F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061278502369E066009F0F0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0612787B2369F50F009F0F0B /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		0612787C2369F50F009F0F0B /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		0612787E2369F52B009F0F0B /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		0612787F2369F52B009F0F0B /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		061278822369F7A1009F0F0B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		061278832369F840009F0F0B /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E8C4885FC0F077879EA232 /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		436ED40423C05B946EA38D8C /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		44FE7017070360206828D8A2 /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06127889236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Frameworks */,
 				CAFBEF49A17807E972F4FB58 /* Pods_iOSObjc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,19 +94,29 @@
 		0612783D2369E065009F0F0B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				061278812369F77B009F0F0B /* Utils */,
 				0612783E2369E065009F0F0B /* AppDelegate.h */,
 				0612783F2369E065009F0F0B /* AppDelegate.m */,
-				061278412369E065009F0F0B /* SceneDelegate.h */,
-				061278422369E065009F0F0B /* SceneDelegate.m */,
-				061278442369E065009F0F0B /* ViewController.h */,
-				061278452369E065009F0F0B /* ViewController.m */,
 				061278472369E065009F0F0B /* Main.storyboard */,
 				0612784A2369E066009F0F0B /* Assets.xcassets */,
 				0612784C2369E066009F0F0B /* LaunchScreen.storyboard */,
 				0612784F2369E066009F0F0B /* Info.plist */,
 				061278502369E066009F0F0B /* main.m */,
+				0612787B2369F50F009F0F0B /* MenuViewController.h */,
+				0612787C2369F50F009F0F0B /* MenuViewController.m */,
+				0612787E2369F52B009F0F0B /* PlayerViewController.h */,
+				0612787F2369F52B009F0F0B /* PlayerViewController.m */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		061278812369F77B009F0F0B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				061278822369F7A1009F0F0B /* Constants.h */,
+				061278832369F840009F0F0B /* Constants.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3CF7B16C3A040FED6A3E2F5D /* Pods */ = {
@@ -105,6 +136,7 @@
 		658EDB92178FA743D72BF4ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */,
 				F46A7C9F9C1637DF5EFD9BFC /* Pods_tvOS.framework */,
 				C078B74EB21CD94B761DEFC2 /* Pods_iOSObjc.framework */,
 			);
@@ -123,6 +155,7 @@
 				061278392369E065009F0F0B /* Frameworks */,
 				0612783A2369E065009F0F0B /* Resources */,
 				02082CE0B949DA66F8FB80A1 /* [CP] Embed Pods Frameworks */,
+				0612788B236AE570009F0F0B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,10 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061278462369E065009F0F0B /* ViewController.m in Sources */,
+				061278842369F840009F0F0B /* Constants.m in Sources */,
 				061278402369E065009F0F0B /* AppDelegate.m in Sources */,
+				061278802369F52B009F0F0B /* PlayerViewController.m in Sources */,
 				061278512369E066009F0F0B /* main.m in Sources */,
-				061278432369E065009F0F0B /* SceneDelegate.m in Sources */,
+				0612787D2369F50F009F0F0B /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
