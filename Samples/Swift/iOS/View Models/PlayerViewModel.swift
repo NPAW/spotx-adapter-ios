@@ -36,14 +36,13 @@ class PlayerViewModel {
         options.waitForMetadata = false
         
         self.plugin = YBPlugin(options: options)
-        
     }
     
     func getAdRequest() -> SpotXAdRequest {
         
             let request = SpotXAdRequest()
             
-            request.setChannel(Constants.spotXTestChannel)
+            request.setChannel("Constants.spotXTestChannel")
         
             return request
         }

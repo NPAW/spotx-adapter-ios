@@ -11,7 +11,7 @@ import YouboraLib
 import SpotX
 
 internal protocol AuxiliarMethods {
-    func resetQuartile()
+    func resetAdInfo()
     func calculateAdQuartile(currentTime: Double)
     func incrementAndSendQuartile()
 }
@@ -20,6 +20,7 @@ internal class YBSpotXPlayerAdAdapterBase: YBPlayerAdapter<AnyObject> {
     
     weak var delegate: SpotXAdPlayerDelegate?
     
+    var isCurrentAdSkippable = false
     var currentAd: SpotXAd?
     var currentAdBreak: SpotXAdGroup?
     var playhead: Double?
@@ -39,7 +40,7 @@ internal class YBSpotXPlayerAdAdapterBase: YBPlayerAdapter<AnyObject> {
         guard let player = self.player as? SpotXInterstitialAdPlayer else {
             return
         }
-
+        
         player.delegate = self
     }
     
@@ -47,6 +48,7 @@ internal class YBSpotXPlayerAdAdapterBase: YBPlayerAdapter<AnyObject> {
         guard let player = self.player as? SpotXInterstitialAdPlayer else {
             return
         }
+        
         player.delegate = nil
     }
     
@@ -109,6 +111,10 @@ internal class YBSpotXPlayerAdAdapterBase: YBPlayerAdapter<AnyObject> {
     override func getAdProvider() -> String? { return nil }
     
     override func getResource() -> String? { return nil }
+    
+    override func isSkippable() -> NSValue? {
+        return  NSNumber(value: self.isCurrentAdSkippable)
+    }
 }
 
 // MARK: SpotXAdPlayerDelegate methods
@@ -123,12 +129,14 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
     
     func spotx(_ player: SpotXAdPlayer, didLoadAds group: SpotXAdGroup?, error: Error?) {
         self.delegate?.spotx?(player, didLoadAds: group, error: error)
-        fireStart()
+        if let adsError = error {
+            fireFatalError(withMessage: (adsError as NSError).localizedDescription, code: (adsError as NSError).domain, andMetadata: nil)
+            return
+        }
     }
     
     func spotx(_ player: SpotXAdPlayer, adGroupStart group: SpotXAdGroup) {
         self.delegate?.spotx?(player, adGroupStart: group)
-    
         self.currentAdBreak = group
         fireAdBreakStart()
         
@@ -142,7 +150,7 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
     
     func spotx(_ player: SpotXAdPlayer, adStart ad: SpotXAd) {
         self.delegate?.spotx?(player, adStart: ad)
-        self.resetQuartile()
+        self.resetAdInfo()
         self.currentAd = ad
         fireStart()
         fireJoin()
@@ -150,7 +158,6 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
     
     func spotx(_ player: SpotXAdPlayer, adPlaying ad: SpotXAd) {
         self.delegate?.spotx?(player, adPlaying: ad)
-        fireResume()
     }
     
     func spotx(_ player: SpotXAdPlayer, adPaused ad: SpotXAd) {
@@ -161,19 +168,20 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
     func spotx(_ player: SpotXAdPlayer, adTimeUpdate ad: SpotXAd, timeElapsed seconds: Double) {
         self.delegate?.spotx?(player, adTimeUpdate: ad, timeElapsed: seconds)
         self.playhead = seconds
+        fireResume()
         calculateAdQuartile(currentTime: seconds)
     }
     
     func spotx(_ player: SpotXAdPlayer, adClicked ad: SpotXAd) {
         self.delegate?.spotx?(player, adClicked: ad)
-        fireClick()
+        fireClick(withAdUrl: ad.clickthru)
     }
     
     func spotx(_ player: SpotXAdPlayer, adComplete ad: SpotXAd) {
         self.delegate?.spotx?(player, adComplete: ad)
+        fireStop()
         self.playhead = nil
         self.currentAd = nil
-        fireStop()
     }
     
     func spotx(_ player: SpotXAdPlayer, adSkipped ad: SpotXAd) {
@@ -192,6 +200,7 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
         self.delegate?.spotx?(player, adError: ad, error: error)
         if let error = error as NSError? {
             fireFatalError(withMessage: error.localizedDescription, code: "\(error.code)", andMetadata: nil)
+            return
         }
         
         fireFatalError(withMessage: "Unknown", code: "Unknown", andMetadata: nil)
@@ -199,11 +208,16 @@ extension YBSpotXPlayerAdAdapterBase: SpotXAdPlayerDelegate {
     
     func spotx(_ player: SpotXAdPlayer, ad: SpotXAd, didChangeSkippableState skippable: Bool) {
         self.delegate?.spotx?(player, ad: ad, didChangeSkippableState: skippable)
+        self.isCurrentAdSkippable = skippable
     }
 }
 
+// MARK: Auxliar methods
 extension YBSpotXPlayerAdAdapterBase: AuxiliarMethods {
-    func resetQuartile() { self.lastQuartile = 0 }
+    func resetAdInfo() {
+        self.lastQuartile = 0
+        self.isCurrentAdSkippable = false
+    }
     
     func calculateAdQuartile(currentTime: Double) {
         guard let ad = self.currentAd else {
