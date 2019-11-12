@@ -35,6 +35,10 @@ class PlayerViewModel {
         options.offline = false
         options.waitForMetadata = false
         
+        options.adExpectedPattern = [
+            "pre": NSNumber(value: 1)
+        ]
+        
         self.plugin = YBPlugin(options: options)
     }
     
@@ -42,7 +46,7 @@ class PlayerViewModel {
         
             let request = SpotXAdRequest()
             
-            request.setChannel("Constants.spotXTestChannel")
+            request.setChannel(Constants.spotXTestChannel)
         
             return request
         }

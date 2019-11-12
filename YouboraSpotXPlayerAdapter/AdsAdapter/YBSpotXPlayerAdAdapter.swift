@@ -95,7 +95,7 @@ internal class YBSpotXPlayerAdAdapterBase: YBPlayerAdapter<AnyObject> {
         
         return NSNumber(value: adBreak.ads.count)
     }
-    
+
     override open func getPlayerName() -> String? {
         return Utils.getPlayerName(ads: true)
     }
