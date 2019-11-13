@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(YOUBORA_SPOT_X_ADAPTER_VERSION)</string>
+	<string>$(YOUBORA_SPOT_X_ADAPTER_VERSION_SETTING)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 </dict>

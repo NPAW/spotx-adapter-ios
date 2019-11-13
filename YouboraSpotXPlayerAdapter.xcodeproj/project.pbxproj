@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F724D57A0E975B29726699 /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7836743DF4E823F2124A1958 /* Pods_YouboraSpotXPlayerAdapter.framework */; };
 		0612778F2369DD57009F0F0B /* YouboraSpotXPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0612778D2369DD57009F0F0B /* YouboraSpotXPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06127887236ADE9F009F0F0B /* YBSpotXPlayerAdAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127886236ADE9F009F0F0B /* YBSpotXPlayerAdAdapter.swift */; };
 		06127897236AFCF3009F0F0B /* YBSpotXPlayerAdAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127896236AFCF3009F0F0B /* YBSpotXPlayerAdAdapterManager.swift */; };
 		0612789A23703107009F0F0B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0612789923703107009F0F0B /* Utils.swift */; };
 		0612789C23703125009F0F0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0612789B23703125009F0F0B /* Constants.swift */; };
-		625CBAE3DFDF3FAA4544C24A /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2020035074D1AA65F8073663 /* Pods_YouboraSpotXPlayerAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,11 @@
 		06127896236AFCF3009F0F0B /* YBSpotXPlayerAdAdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBSpotXPlayerAdAdapterManager.swift; sourceTree = "<group>"; };
 		0612789923703107009F0F0B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0612789B23703125009F0F0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2020035074D1AA65F8073663 /* Pods_YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5463FD7FB88F21A192C85938 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; sourceTree = "<group>"; };
-		E744E0419B8F0A45D4B0EE94 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; sourceTree = "<group>"; };
+		06C1F483237C6CE700CEE346 /* SpotX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotX.framework; path = Frameworks/SpotX.framework; sourceTree = "<group>"; };
+		06C1F485237C6DBE00CEE346 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		0813A737ACCF2CEE719C9AE8 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; sourceTree = "<group>"; };
+		0A5E2035695FDA86DFCF4E40 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; sourceTree = "<group>"; };
+		7836743DF4E823F2124A1958 /* Pods_YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				625CBAE3DFDF3FAA4544C24A /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */,
+				02F724D57A0E975B29726699 /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +48,7 @@
 				0612778C2369DD57009F0F0B /* YouboraSpotXPlayerAdapter */,
 				0612778B2369DD57009F0F0B /* Products */,
 				5FC96F493B268A7B8C46260D /* Pods */,
-				28F438A790869DFB0531F840 /* Frameworks */,
+				8B64E1FC35A5B24D90AF96D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,21 +89,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		28F438A790869DFB0531F840 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2020035074D1AA65F8073663 /* Pods_YouboraSpotXPlayerAdapter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5FC96F493B268A7B8C46260D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E744E0419B8F0A45D4B0EE94 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */,
-				5463FD7FB88F21A192C85938 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */,
+				0813A737ACCF2CEE719C9AE8 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */,
+				0A5E2035695FDA86DFCF4E40 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B64E1FC35A5B24D90AF96D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06C1F485237C6DBE00CEE346 /* Frameworks */,
+				06C1F483237C6CE700CEE346 /* SpotX.framework */,
+				7836743DF4E823F2124A1958 /* Pods_YouboraSpotXPlayerAdapter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +126,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061277922369DD57009F0F0B /* Build configuration list for PBXNativeTarget "YouboraSpotXPlayerAdapter" */;
 			buildPhases = (
-				765BB4CC8D148FAD6FE88205 /* [CP] Check Pods Manifest.lock */,
+				D45628B281ECD049BD82863D /* [CP] Check Pods Manifest.lock */,
 				061277852369DD57009F0F0B /* Headers */,
 				061277862369DD57009F0F0B /* Sources */,
 				061277872369DD57009F0F0B /* Frameworks */,
@@ -199,7 +203,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		765BB4CC8D148FAD6FE88205 /* [CP] Check Pods Manifest.lock */ = {
+		D45628B281ECD049BD82863D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,6 +279,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -299,7 +304,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORA_SPOT_X_ADAPTER_VERSION = 0.0.1;
+				YOUBORA_SPOT_X_ADAPTER_VERSION_SETTING = 0.0.1;
 			};
 			name = Debug;
 		};
@@ -340,6 +345,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -358,21 +364,25 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORA_SPOT_X_ADAPTER_VERSION = 0.0.1;
+				YOUBORA_SPOT_X_ADAPTER_VERSION_SETTING = 0.0.1;
 			};
 			name = Release;
 		};
 		061277932369DD57009F0F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E744E0419B8F0A45D4B0EE94 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */;
+			baseConfigurationReference = 0813A737ACCF2CEE719C9AE8 /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = YouboraSpotXPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -384,6 +394,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = npaw.YouboraSpotXPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -394,15 +405,19 @@
 		};
 		061277942369DD57009F0F0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5463FD7FB88F21A192C85938 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */;
+			baseConfigurationReference = 0A5E2035695FDA86DFCF4E40 /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = YouboraSpotXPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -414,6 +429,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = npaw.YouboraSpotXPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
