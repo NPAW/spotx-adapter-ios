@@ -14,16 +14,16 @@ import SpotX
     var playerAdapter: YBSpotXPlayerAdAdapterBase?
 
     public override init() {
-        playerAdapter = YBSpotXPlayerAdAdapterBase()
+        self.playerAdapter = YBSpotXPlayerAdAdapterBase()
     }
 
     public init(player: AnyObject) {
-        playerAdapter = YBSpotXPlayerAdAdapterBase(player: player)
+        self.playerAdapter = YBSpotXPlayerAdAdapterBase(player: player)
     }
     
     public init(player: AnyObject, delegate: SpotXAdPlayerDelegate?) {
         guard let delegate = delegate else {
-            playerAdapter = YBSpotXPlayerAdAdapterBase(player: player)
+            self.playerAdapter = YBSpotXPlayerAdAdapterBase(player: player)
             return
         }
         
