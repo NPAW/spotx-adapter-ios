@@ -33,6 +33,7 @@ jobs:
       osx_image: xcode9.2
       env: SWIFT=4.0
       install:
+        - gem install cocoapods
         - gem update xcodeproj
         - pod update
         - pod install
