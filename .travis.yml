@@ -11,8 +11,8 @@ env:
     - ADAPTER_VERSION_TAG=YOUBORA_SPOT_X_ADAPTER_VERSION_SETTING
 
 stages:
-  - name: swiftLint
-    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  # - name: swiftLint
+  #   if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: deploy
