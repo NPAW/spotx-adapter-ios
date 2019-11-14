@@ -12,6 +12,7 @@
 		06127897236AFCF3009F0F0B /* YBSpotXPlayerAdAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127896236AFCF3009F0F0B /* YBSpotXPlayerAdAdapterManager.swift */; };
 		0612789A23703107009F0F0B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0612789923703107009F0F0B /* Utils.swift */; };
 		0612789C23703125009F0F0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0612789B23703125009F0F0B /* Constants.swift */; };
+		87839C2007A9607105BFC0AB /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186A0D740938A32E76D230EB /* Pods_YouboraSpotXPlayerAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0612789B23703125009F0F0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		06C1F483237C6CE700CEE346 /* SpotX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotX.framework; path = Frameworks/SpotX.framework; sourceTree = "<group>"; };
 		06C1F485237C6DBE00CEE346 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		186A0D740938A32E76D230EB /* Pods_YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2916551ECDC2F440D6747A /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.release.xcconfig"; sourceTree = "<group>"; };
+		F56EE449F0FAC56841AF603F /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; path = "Target Support Files/Pods-YouboraSpotXPlayerAdapter/Pods-YouboraSpotXPlayerAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87839C2007A9607105BFC0AB /* Pods_YouboraSpotXPlayerAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,8 @@
 		5FC96F493B268A7B8C46260D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				F56EE449F0FAC56841AF603F /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */,
+				9D2916551ECDC2F440D6747A /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 			children = (
 				06C1F485237C6DBE00CEE346 /* Frameworks */,
 				06C1F483237C6CE700CEE346 /* SpotX.framework */,
+				186A0D740938A32E76D230EB /* Pods_YouboraSpotXPlayerAdapter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061277922369DD57009F0F0B /* Build configuration list for PBXNativeTarget "YouboraSpotXPlayerAdapter" */;
 			buildPhases = (
+				B6CC4F3D7E8060A847B3B979 /* [CP] Check Pods Manifest.lock */,
 				061277852369DD57009F0F0B /* Headers */,
 				061277862369DD57009F0F0B /* Sources */,
 				061277872369DD57009F0F0B /* Frameworks */,
@@ -193,6 +202,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		B6CC4F3D7E8060A847B3B979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouboraSpotXPlayerAdapter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -339,6 +370,7 @@
 		};
 		061277932369DD57009F0F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56EE449F0FAC56841AF603F /* Pods-YouboraSpotXPlayerAdapter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -373,6 +405,7 @@
 		};
 		061277942369DD57009F0F0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2916551ECDC2F440D6747A /* Pods-YouboraSpotXPlayerAdapter.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
