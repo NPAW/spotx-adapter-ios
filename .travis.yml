@@ -1,0 +1,66 @@
+os: osx
+osx_image: xcode10.3
+language: swift
+
+env:
+  global:
+    - APP_NAME=YouboraSpotXPlayerAdapter
+    - INFO_PLIST=$PWD/$APP_NAME/Info.plist
+    - PLATFORMS=ios
+    - GENERIC_VERSION=0.0.1
+    - ADAPTER_VERSION_TAG=YOUBORA_SPOT_X_ADAPTER_VERSION_SETTING
+
+stages:
+  - name: swiftLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: podLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: deploy
+    if: branch =~ ^\d+\.\d+\.\d+$
+
+jobs:
+  include:
+    - &lint
+      stage: swiftLint
+      install: pod update && pod install
+      script:
+        - xcodebuild -workspace $APP_NAME.xcworkspace -scheme $APP_NAME
+      after_failure:
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
+
+    - &pod
+      stage: podLint
+      osx_image: xcode9.2
+      env: SWIFT=4.0
+      install: pod update && pod install
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+      after_failure:
+        - cat pod.log
+        - grep error
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
+    - <<: *pod
+      osx_image: xcode9.4
+      env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
+
+    - name: "`pod trunk push`"
+      stage: deploy
+      install: pod update && pod install
+      before_script:
+        - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
+        - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj
+      script:
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
