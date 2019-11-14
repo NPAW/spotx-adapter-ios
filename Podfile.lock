@@ -1,11 +1,11 @@
 PODS:
   - SpotX-SDK (4.5.0)
-  - YouboraAVPlayerAdapter (6.5.6):
-    - YouboraAVPlayerAdapter/Default (= 6.5.6)
-    - YouboraLib (~> 6.5.0)
-  - YouboraAVPlayerAdapter/Default (6.5.6):
-    - YouboraLib (~> 6.5.0)
-  - YouboraConfigUtils (1.1.0):
+  - YouboraAVPlayerAdapter (6.5.8):
+    - YouboraAVPlayerAdapter/Default (= 6.5.8)
+    - YouboraLib
+  - YouboraAVPlayerAdapter/Default (6.5.8):
+    - YouboraLib
+  - YouboraConfigUtils (1.1.1):
     - YouboraLib (= 6.5.8)
   - YouboraLib (6.5.8)
 
@@ -24,8 +24,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   SpotX-SDK: 59b69c3fcbe41b395cbf1083cbf7a85d5682d0f7
-  YouboraAVPlayerAdapter: 1450fd76be9caf64ca35967d67b85876c592c266
-  YouboraConfigUtils: ba9f41452b83cd8206126f608bbeda478d2d0aca
+  YouboraAVPlayerAdapter: a114f17cabd780270165dd8d232e9e009eb9d61b
+  YouboraConfigUtils: 6e646be968b52ab23529ee3d8576ea2e6ece862b
   YouboraLib: 87e023e76dd68dfc3fcdebcfb984adc6774706f7
 
 PODFILE CHECKSUM: cdd54987d6a3cf86370c001f74c87cc77862dbf7
