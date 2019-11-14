@@ -32,9 +32,7 @@ jobs:
       stage: podLint
       osx_image: xcode9.2
       env: SWIFT=4.0
-      install:
-        - pod repo update
-        - pod install
+      install: pod install
       script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings
       after_failure:
         - cat pod.log
