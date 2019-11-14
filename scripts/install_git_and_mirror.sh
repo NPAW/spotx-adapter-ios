@@ -1,3 +1,5 @@
+cat ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
 apt-get update
 apt-get install -y git
 mkdir -p ~/.ssh
