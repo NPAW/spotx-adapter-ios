@@ -34,7 +34,6 @@ jobs:
       env: SWIFT=4.0
       install:
         - pod update
-        - pod deintegrate
         - pod install
       script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings
       after_failure:
