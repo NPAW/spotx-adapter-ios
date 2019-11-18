@@ -2,6 +2,14 @@
 
 An adapter to track events and send them to the Youbora to build the analytics
 
+# To run the samples project
+
+Into the root of the project run
+
+```bash
+ pod install
+```
+
 # Installation
 
 #### CocoaPods
@@ -60,3 +68,5 @@ self.plugin = [[YBPlugin alloc] initWithOptions:options andAdapter:[adapterMange
 ```
 
 For more information you can check the examples in the folder **./Samples/Swift** for swift and for obj-c **./Samples/Objc**
+
+Or visit [integration guide](http://developer.nicepeopleatwork.com/plugins/integration/spotx-2/)
