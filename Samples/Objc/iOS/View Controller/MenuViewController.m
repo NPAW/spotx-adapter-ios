@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-#import <YouboraConfigUtils-Swift.h>
+#import <YouboraConfigUtils/YouboraConfigUtils-Swift.h>
 #import "PlayerViewController.h"
 @interface MenuViewController ()
 
@@ -24,13 +24,14 @@
 }
 
 - (IBAction)pressSettings:(id)sender {
-    YouboraConfigViewController *settingsViewController = [[YouboraConfigViewController alloc] init];
+    YouboraConfigViewController *settingsViewController = [[YouboraConfigViewController new] initFromXIB];
     [self.navigationController pushViewController:[settingsViewController initFromXIB] animated:true];
 }
 
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if ([viewController isKindOfClass:[PlayerViewController class]]) {
-        [((PlayerViewController*) viewController) playInterstitial];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[PlayerViewController class]]) {
+        ((PlayerViewController*)segue.destinationViewController).viewModel = [[PlayerViewModel alloc] initWithSegueIdentifier:segue.identifier];
     }
 }
+
 @end

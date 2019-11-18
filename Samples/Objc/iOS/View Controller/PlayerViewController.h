@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVKit/AVKit.h>
+#import "PlayerViewModel.h"
+
 @import SpotX;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PlayerViewController : UIViewController <SpotXAdPlayerDelegate>
 
--(void) playInterstitial;
+@property PlayerViewModel *viewModel;
 
 @end
 

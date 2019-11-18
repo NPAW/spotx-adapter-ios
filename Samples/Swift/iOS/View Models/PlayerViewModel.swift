@@ -56,7 +56,6 @@ class PlayerViewModel {
             return
         }
         
-        self.plugin.fireInit()
         self.wrapper = YBAVPlayerAdapterSwiftWrapper(adapter: YBAVPlayerAdapter(player: nonOptionalPlayer), andPlugin: self.plugin)
     }
     

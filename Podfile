@@ -42,4 +42,5 @@ target 'iOSObjc' do
   platform :ios, '9.0'
   common_pods
   pod 'YouboraConfigUtils'
+  pod 'YouboraAVPlayerAdapter'
 end

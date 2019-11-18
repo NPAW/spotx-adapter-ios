@@ -17,6 +17,8 @@
 		061278842369F840009F0F0B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 061278832369F840009F0F0B /* Constants.m */; };
 		06127889236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */; };
 		0612788A236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06B2870E2382E9F8004EE187 /* PlayerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B2870D2382E9F8004EE187 /* PlayerViewModel.m */; };
+		06B287112382EA4D004EE187 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B287102382EA4D004EE187 /* Utils.m */; };
 		CAFBEF49A17807E972F4FB58 /* Pods_iOSObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C078B74EB21CD94B761DEFC2 /* Pods_iOSObjc.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,10 @@
 		061278822369F7A1009F0F0B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		061278832369F840009F0F0B /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		06127888236AE570009F0F0B /* YouboraSpotXPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraSpotXPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B2870C2382E9F8004EE187 /* PlayerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewModel.h; sourceTree = "<group>"; };
+		06B2870D2382E9F8004EE187 /* PlayerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewModel.m; sourceTree = "<group>"; };
+		06B2870F2382EA4D004EE187 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		06B287102382EA4D004EE187 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		10E8C4885FC0F077879EA232 /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		436ED40423C05B946EA38D8C /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		44FE7017070360206828D8A2 /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +100,9 @@
 		0612783D2369E065009F0F0B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				06B287122382FC72004EE187 /* View Controller */,
 				061278812369F77B009F0F0B /* Utils */,
+				06B2870B2382E9C9004EE187 /* View Model */,
 				0612783E2369E065009F0F0B /* AppDelegate.h */,
 				0612783F2369E065009F0F0B /* AppDelegate.m */,
 				061278472369E065009F0F0B /* Main.storyboard */,
@@ -102,10 +110,6 @@
 				0612784C2369E066009F0F0B /* LaunchScreen.storyboard */,
 				0612784F2369E066009F0F0B /* Info.plist */,
 				061278502369E066009F0F0B /* main.m */,
-				0612787B2369F50F009F0F0B /* MenuViewController.h */,
-				0612787C2369F50F009F0F0B /* MenuViewController.m */,
-				0612787E2369F52B009F0F0B /* PlayerViewController.h */,
-				0612787F2369F52B009F0F0B /* PlayerViewController.m */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -115,8 +119,30 @@
 			children = (
 				061278822369F7A1009F0F0B /* Constants.h */,
 				061278832369F840009F0F0B /* Constants.m */,
+				06B2870F2382EA4D004EE187 /* Utils.h */,
+				06B287102382EA4D004EE187 /* Utils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		06B2870B2382E9C9004EE187 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				06B2870C2382E9F8004EE187 /* PlayerViewModel.h */,
+				06B2870D2382E9F8004EE187 /* PlayerViewModel.m */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		06B287122382FC72004EE187 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0612787B2369F50F009F0F0B /* MenuViewController.h */,
+				0612787C2369F50F009F0F0B /* MenuViewController.m */,
+				0612787E2369F52B009F0F0B /* PlayerViewController.h */,
+				0612787F2369F52B009F0F0B /* PlayerViewController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		3CF7B16C3A040FED6A3E2F5D /* Pods */ = {
@@ -260,9 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				061278842369F840009F0F0B /* Constants.m in Sources */,
+				06B2870E2382E9F8004EE187 /* PlayerViewModel.m in Sources */,
 				061278402369E065009F0F0B /* AppDelegate.m in Sources */,
 				061278802369F52B009F0F0B /* PlayerViewController.m in Sources */,
 				061278512369E066009F0F0B /* main.m in Sources */,
+				06B287112382EA4D004EE187 /* Utils.m in Sources */,
 				0612787D2369F50F009F0F0B /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
